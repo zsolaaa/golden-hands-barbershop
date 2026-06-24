@@ -188,7 +188,7 @@
                         </div>
                         <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">20 perc</p>
                     </div>
-                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5 services-extra hidden">
                         <div class="flex justify-between items-start mb-2 gap-2">
                             <div class="flex flex-wrap items-center gap-2">
                                 <h3 class="text-sm font-bold text-white uppercase tracking-wider">Haj & Szakáll</h3>
@@ -198,14 +198,14 @@
                         </div>
                         <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">Prémium haj- és szakállformázás. Tökéletes fade, precíz kontúrozás. (45 perc)</p>
                     </div>
-                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5 services-extra hidden">
                         <div class="flex justify-between items-start mb-2 gap-2">
                             <h3 class="text-sm font-bold text-white uppercase tracking-wider">Hajvágás + Szemöldök szedés cérnával</h3>
                             <div class="text-lg font-black text-gold whitespace-nowrap">8 000 Ft</div>
                         </div>
                         <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">40 perc</p>
                     </div>
-                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5 services-extra hidden">
                         <div class="flex justify-between items-start mb-2 gap-2">
                             <h3 class="text-sm font-bold text-white uppercase tracking-wider">Hajvágás & Szakállvágás & Szemöldök igazítás</h3>
                             <div class="text-lg font-black text-gold whitespace-nowrap">13 000 Ft</div>
@@ -216,7 +216,7 @@
             </div>
 
             <!-- Festés -->
-            <div class="mb-10 md:mb-12">
+            <div class="mb-10 md:mb-12 services-extra hidden">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Festés</span>
                     <span class="flex-1 h-px bg-bordercolor"></span>
@@ -275,7 +275,7 @@
             </div>
 
             <!-- Szőkítés -->
-            <div class="mb-10 md:mb-12">
+            <div class="mb-10 md:mb-12 services-extra hidden">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Szőkítés</span>
                     <span class="flex-1 h-px bg-bordercolor"></span>
@@ -306,7 +306,7 @@
             </div>
 
             <!-- Dauer -->
-            <div class="mb-10 md:mb-12">
+            <div class="mb-10 md:mb-12 services-extra hidden">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Dauer</span>
                     <span class="flex-1 h-px bg-bordercolor"></span>
@@ -358,7 +358,7 @@
             </div>
 
             <!-- Melit -->
-            <div class="mb-10 md:mb-12">
+            <div class="mb-10 md:mb-12 services-extra hidden">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Melit</span>
                     <span class="flex-1 h-px bg-bordercolor"></span>
@@ -389,7 +389,7 @@
             </div>
 
             <!-- Kiegészítők -->
-            <div class="mb-10 md:mb-12">
+            <div class="mb-10 md:mb-12 services-extra hidden">
                 <div class="flex items-center gap-4 mb-6">
                     <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Kiegészítők</span>
                     <span class="flex-1 h-px bg-bordercolor"></span>
@@ -426,7 +426,13 @@
                 </div>
             </div>
 
-            <div class="mt-4 flex justify-center">
+            <div class="mt-6 flex justify-center">
+                <button id="services-toggle" onclick="toggleServices()" class="border border-gold text-gold px-8 py-3 text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition">
+                    Összes szolgáltatás megtekintése (26 további) ↓
+                </button>
+            </div>
+
+            <div class="mt-4 flex justify-center services-extra hidden">
                 <a href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-10 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition">
                     Foglalj időpontot &rarr;
                 </a>
@@ -578,6 +584,17 @@
     </footer>
 
     <script>
+        function toggleServices() {
+            const extras = document.querySelectorAll('.services-extra');
+            const btn = document.getElementById('services-toggle');
+            const expanded = btn.dataset.expanded === 'true';
+            extras.forEach(el => el.classList.toggle('hidden', expanded));
+            btn.dataset.expanded = !expanded;
+            btn.textContent = expanded
+                ? 'Összes szolgáltatás megtekintése (26 további) ↓'
+                : 'Kevesebb mutatása ↑';
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
