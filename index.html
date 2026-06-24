@@ -285,13 +285,13 @@
 <main class="overflow-x-hidden" id="main-content">
 
 <!-- ── Hero Section ───────────────────────────────────────────── -->
-<section class="relative min-h-[70vh] md:min-h-screen flex flex-col items-center justify-start md:justify-center pt-[calc(56px+20vh-60px)] md:pt-24 px-margin brick-texture overflow-hidden" id="home">
+<section class="relative min-h-[70vh] md:min-h-screen flex flex-col items-center justify-start md:justify-center pt-[calc(56px+20vh-60px)] md:pt-24 px-margin brick-texture md:overflow-hidden" id="home">
 
 <!-- Watermark letterform — editorial depth -->
 <div class="hero-wm" aria-hidden="true">GOLDEN</div>
 
 <!-- Mobile hero image — starts below nav, desktop hidden -->
-<div class="md:hidden absolute top-[calc(48px+20vh)] right-0 w-[44%] h-[50vh] hero-anim anim-scale d5" aria-hidden="true">
+<div class="md:hidden absolute top-[calc(48px+20vh-60px)] right-0 w-[44%] h-[50vh] hero-anim anim-scale d5" aria-hidden="true">
     <img
         src="images/barber.png"
         alt=""
@@ -355,7 +355,7 @@
 </div>
 
 <!-- Scroll indicator -->
-<div class="hero-anim anim-up d6 absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 z-10">
+<div class="hero-anim anim-up d6 absolute bottom-8 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 z-20">
     <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant" style="font-size:10px">Görgess</span>
     <div class="w-[1px] h-8 bg-primary/60 animate-pulse"></div>
 </div>
