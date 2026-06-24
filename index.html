@@ -1,842 +1,611 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="hu"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>GOLDEN HAND'S Barbershop - Prémium Férfi Hajvágás</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Hanken+Grotesk:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Hand's Barbershop | Győr</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
-                        "on-tertiary-fixed": "#1c1b1b",
-                        "surface-container-highest": "#333535",
-                        "secondary": "#c8c6c5",
-                        "inverse-primary": "#755b00",
-                        "secondary-fixed": "#e5e2e1",
-                        "surface-container-low": "#1a1c1c",
-                        "primary-fixed-dim": "#e6c364",
-                        "inverse-on-surface": "#2f3131",
-                        "surface-bright": "#37393a",
-                        "error-container": "#93000a",
-                        "primary": "#e6c364",
-                        "surface-container-high": "#282a2b",
-                        "inverse-surface": "#e2e2e2",
-                        "tertiary-fixed-dim": "#c9c6c5",
-                        "on-secondary-fixed-variant": "#474746",
-                        "surface-variant": "#333535",
-                        "error": "#ffb4ab",
-                        "tertiary-container": "#adabaa",
-                        "on-tertiary-container": "#403f3f",
-                        "on-surface-variant": "#d0c5b2",
-                        "surface-container-lowest": "#0c0f0f",
-                        "surface-dim": "#121414",
-                        "on-tertiary": "#313030",
-                        "on-primary-fixed-variant": "#584400",
-                        "on-secondary-container": "#b7b5b4",
-                        "surface-tint": "#e6c364",
-                        "on-primary-fixed": "#241a00",
-                        "on-surface": "#e2e2e2",
-                        "on-primary": "#3d2e00",
-                        "outline": "#99907e",
-                        "background": "#121414",
-                        "primary-fixed": "#ffe08f",
-                        "on-secondary-fixed": "#1c1b1b",
-                        "surface": "#121414",
-                        "secondary-container": "#474746",
-                        "on-tertiary-fixed-variant": "#474646",
-                        "on-secondary": "#313030",
-                        "on-error": "#690005",
-                        "primary-container": "#c9a84c",
-                        "on-background": "#e2e2e2",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "surface-container": "#1e2020",
-                        "on-error-container": "#ffdad6",
-                        "outline-variant": "#4d4637",
-                        "tertiary": "#c9c6c6",
-                        "on-primary-container": "#503d00",
-                        "tertiary-fixed": "#e5e2e1"
+                    colors: {
+                        gold: '#cba358',
+                        dark: '#111111',
+                        darker: '#080808',
+                        card: '#181818',
+                        bordercolor: '#2a2a2a'
                     },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "margin": "16px",
-                        "section-padding-mobile": "40px",
-                        "section-padding-desktop": "80px",
-                        "base": "8px"
-                    },
-                    "fontFamily": {
-                        "headline-lg-mobile": ["Libre Caslon Text"],
-                        "label-sm": ["Hanken Grotesk"],
-                        "body-md": ["Hanken Grotesk"],
-                        "headline-lg": ["Libre Caslon Text"],
-                        "display-lg": ["Libre Caslon Text"]
-                    },
-                    "fontSize": {
-                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
-                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
                     }
-                },
-            },
+                }
+            }
         }
     </script>
-<style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Hanken Grotesk', sans-serif; background-color: #0c0f0f; color: #e2e2e2; }
-        .serif { font-family: 'Libre Caslon Text', serif; }
-
-        .gold-border-gradient {
-            border: 1px solid rgba(201, 168, 76, 0.2);
-            transition: border-color 0.3s ease;
-        }
-        .gold-border-gradient:hover {
-            border-color: rgba(201, 168, 76, 0.6);
-        }
-
-        .service-dots {
-            flex-grow: 1;
-            border-bottom: 1px dotted rgba(230, 195, 100, 0.3);
-            margin: 0 12px;
-            margin-bottom: 6px;
-        }
-
-        .brick-texture {
-            background-image: linear-gradient(rgba(12, 15, 15, 0.85), rgba(12, 15, 15, 0.95)),
-                              url('https://www.transparenttextures.com/patterns/black-linen.png');
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0,0,0,0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-        .sr-only:focus {
-            position: fixed;
-            top: 16px;
-            left: 16px;
-            width: auto;
-            height: auto;
-            padding: 10px 20px;
-            margin: 0;
-            overflow: visible;
-            clip: auto;
-            white-space: normal;
-            z-index: 9999;
-            background: #e6c364;
-            color: #3d2e00;
-            font-weight: 700;
-            font-size: 13px;
-            letter-spacing: 0.05em;
-        }
-
-        /* ── Animation system ─────────────────────────────────── */
-        /* Easing: ease-out-expo for premium, unhurried feel */
-        :root {
-            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        /* Base state — hidden before animate */
-        .anim {
-            opacity: 0;
-            will-change: opacity, transform;
-        }
-        .anim-up    { transform: translateY(28px); }
-        .anim-left  { transform: translateX(-28px); }
-        .anim-right { transform: translateX(28px); }
-        .anim-scale { transform: scale(0.96); }
-
-        /* Revealed state */
-        .anim.revealed {
-            opacity: 1;
-            transform: none;
-            transition:
-                opacity 0.75s var(--ease-out-expo),
-                transform 0.75s var(--ease-out-expo);
-        }
-
-        /* Stagger delays */
-        .anim.d1 { transition-delay: 0.08s; }
-        .anim.d2 { transition-delay: 0.16s; }
-        .anim.d3 { transition-delay: 0.24s; }
-        .anim.d4 { transition-delay: 0.32s; }
-        .anim.d5 { transition-delay: 0.40s; }
-
-        /* Hero fires on load — slightly faster, no scroll needed */
-        .hero-anim {
-            opacity: 0;
-            will-change: opacity, transform;
-        }
-        .hero-anim.anim-up    { transform: translateY(20px); }
-        .hero-anim.anim-right { transform: translateX(32px); }
-        .hero-anim.anim-scale { transform: scale(0.97); }
-        .hero-anim.revealed {
-            opacity: 1;
-            transform: none;
-            transition:
-                opacity 0.9s var(--ease-out-expo),
-                transform 0.9s var(--ease-out-expo);
-        }
-        .hero-anim.d1 { transition-delay: 0.10s; }
-        .hero-anim.d2 { transition-delay: 0.22s; }
-        .hero-anim.d3 { transition-delay: 0.34s; }
-        .hero-anim.d4 { transition-delay: 0.46s; }
-        .hero-anim.d5 { transition-delay: 0.58s; }
-        .hero-anim.d6 { transition-delay: 0.70s; }
-
-        /* Hero watermark — editorial depth, text-stroke only (not gradient text) */
-        .hero-wm {
-            position: absolute;
-            pointer-events: none;
-            user-select: none;
-            font-family: 'Libre Caslon Text', serif;
-            font-weight: 700;
-            line-height: 0.88;
-            color: transparent;
-            -webkit-text-stroke: 1.5px rgba(230, 195, 100, 0.055);
-            font-size: clamp(180px, 22vw, 400px);
-            letter-spacing: -0.04em;
-            right: -0.04em;
-            bottom: 0.08em;
-            z-index: 0;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        /* Corner accent lines on hero image */
-        .img-corner {
-            position: absolute;
-            width: 32px;
-            height: 32px;
-            border-color: rgba(230, 195, 100, 0.55);
-            border-style: solid;
-            z-index: 20;
-        }
-        .img-corner-tr { top: -10px; right: -10px; border-width: 2px 2px 0 0; }
-        .img-corner-bl { bottom: -10px; left: -10px; border-width: 0 0 2px 2px; }
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { background-color: #080808; color: #ffffff; overflow-x: hidden; }
+        .neon-text { text-shadow: 0 0 15px rgba(203, 163, 88, 0.4); }
     </style>
 </head>
-<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<body class="antialiased font-sans relative">
 
-<!-- Skip to content -->
-<a class="sr-only" href="#main-content">Ugrás a tartalomhoz</a>
-
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-background/90 dark:bg-background/95 backdrop-blur-md border-b border-outline-variant/30 shadow-md">
-<div class="flex justify-between items-center px-margin md:px-gutter py-3 md:py-4 max-w-[1200px] mx-auto">
-<div class="text-[20px] md:text-headline-lg font-bold tracking-tight text-primary dark:text-primary serif">GOLDEN HAND'S</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-1" href="#home">Kezdőlap</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">Rólunk</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="#services">Szolgáltatások</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="#gallery">Galéria</a>
-<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Kapcsolat</a>
-</div>
-<a class="hidden md:block bg-primary-container text-on-primary-container font-label-sm text-label-sm px-6 py-3 rounded-none tracking-widest uppercase hover:opacity-90 active:scale-95 transition-all" href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer">
-                Foglalj időpontot
-            </a>
-<!-- Mobile Menu Toggle -->
-<button
-    id="mobile-menu-btn"
-    class="md:hidden text-primary"
-    aria-label="Menü megnyitása"
-    aria-expanded="false"
-    aria-controls="mobile-menu"
->
-    <span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
-</button>
-</div>
-<!-- Mobile Menu Panel -->
-<div
-    id="mobile-menu"
-    class="hidden md:hidden bg-background border-t border-outline-variant/30 px-margin py-6 space-y-2"
-    aria-label="Mobil navigáció"
->
-    <a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300 py-3 border-b border-outline-variant/20" href="#home">Kezdőlap</a>
-    <a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300 py-3 border-b border-outline-variant/20" href="#about">Rólunk</a>
-    <a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300 py-3 border-b border-outline-variant/20" href="#services">Szolgáltatások</a>
-    <a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300 py-3 border-b border-outline-variant/20" href="#gallery">Galéria</a>
-    <a class="block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-300 py-3 border-b border-outline-variant/20" href="#contact">Kapcsolat</a>
-    <a class="block bg-primary-container text-on-primary-container font-label-sm text-label-sm px-6 py-3 text-center tracking-widest uppercase mt-4" href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer">Foglalj időpontot</a>
-</div>
-</nav>
-
-<main class="overflow-x-hidden" id="main-content">
-
-<!-- ── Hero Section ───────────────────────────────────────────── -->
-<section class="relative min-h-[650px] md:min-h-screen flex flex-col items-center justify-start md:justify-center pt-[80px] md:pt-24 px-margin brick-texture md:overflow-hidden" id="home">
-
-<!-- Watermark letterform — editorial depth -->
-<div class="hero-wm" aria-hidden="true">GOLDEN</div>
-
-<!-- Mobile hero image — starts below nav, desktop hidden -->
-<div class="md:hidden absolute top-[68px] right-0 w-[44%] h-[60vh] hero-anim anim-scale d5" aria-hidden="true">
-    <img
-        src="images/barber.png"
-        alt=""
-        class="w-full h-full object-cover"
-        style="object-position: 65% 0%"
-        width="600"
-        height="800"/>
-</div>
-
-<div class="max-w-[1200px] mx-auto w-full relative md:grid md:grid-cols-2 md:gap-gutter md:items-center z-10">
-
-    <!-- Left: text — right padding reserves space for the mobile image -->
-    <div class="flex flex-col items-start text-left md:pr-0" style="gap: 0;">
-
-        <!-- Eyebrow -->
-        <div class="hero-anim anim-up flex items-center gap-4 justify-start w-full mb-5 md:mb-7 pr-[46%] md:pr-0">
-            <span class="h-[1px] w-8 bg-primary opacity-50 shrink-0"></span>
-            <span class="font-label-sm text-label-sm uppercase tracking-[0.18em] text-primary shrink-0 hidden sm:inline">Prémium Borbélyüzlet · Győr</span>
-            <span class="font-label-sm text-label-sm uppercase tracking-[0.18em] text-primary shrink-0 sm:hidden">Győr</span>
-            <span class="h-[1px] bg-primary opacity-15 flex-1 hidden md:block"></span>
+    <nav class="fixed top-0 w-full z-[60] px-4 md:px-6 py-4 flex justify-between items-center bg-darker/90 border-b border-bordercolor backdrop-blur-md">
+        <div class="text-lg md:text-xl font-black tracking-[0.15em] text-white uppercase flex items-center gap-1 relative z-[70]">
+            Golden <span class="text-gold">&</span> Hand's
         </div>
 
-        <!-- Headline -->
-        <h1 class="hero-anim anim-up d1 serif font-bold tracking-[-0.025em] leading-[0.95] text-[38px] md:text-[88px] mb-5 md:mb-8 pr-[46%] md:pr-0">
-            Precíz vágás.<br/>Tiszta stílus.<br/><span class="text-primary">Profi barber élmény.</span>
-        </h1>
-
-        <!-- Body -->
-        <p class="hero-anim anim-up d2 font-body-md text-body-md text-on-surface-variant mb-5 md:mb-8 max-w-sm pr-[46%] md:pr-0">
-            Győr legnívósabb borbély szalonja, ahol a hagyomány találkozik a modern precizitással.
-        </p>
-
-        <!-- CTAs -->
-        <div class="hero-anim anim-up d3 flex flex-col gap-3 md:flex-row md:gap-4 mb-0 md:mb-10 w-full">
-            <a class="text-center bg-primary text-on-primary-container px-4 md:px-8 py-3 md:py-4 font-label-sm text-label-sm uppercase tracking-widest hover:brightness-110 transition-all" href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer">
-                Foglalok
-            </a>
-            <a class="text-center border border-primary text-primary px-4 md:px-8 py-3 md:py-4 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary/10 transition-all" href="#services">
-                Szolgáltatások
-            </a>
+        <div class="hidden lg:flex space-x-8 text-[11px] font-bold tracking-[0.15em] text-gray-400">
+            <a href="#about" class="hover:text-gold transition">RÓLUNK</a>
+            <a href="#services" class="hover:text-gold transition">SZOLGÁLTATÁSOK</a>
+            <a href="#portfolio" class="hover:text-gold transition">FOTÓGALÉRIA</a>
+            <a href="#barber" class="hover:text-gold transition">LA PATRICO</a>
+            <a href="#reviews" class="hover:text-gold transition">VÉLEMÉNYEK</a>
         </div>
 
+        <div class="hidden lg:block relative z-[70]">
+            <a href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition">Időpontot foglalok</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="lg:hidden text-white relative z-[70] p-2 focus:outline-none">
+            <svg id="icon-open" class="w-8 h-8 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="icon-close" class="w-8 h-8 absolute top-2 left-2 opacity-0 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-darker z-[50] flex flex-col items-center justify-center space-y-8 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+        <a href="#about" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition">RÓLUNK</a>
+        <a href="#services" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition">SZOLGÁLTATÁSOK</a>
+        <a href="#portfolio" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition">FOTÓGALÉRIA</a>
+        <a href="#barber" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition">LA PATRICO</a>
+        <a href="#reviews" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition">VÉLEMÉNYEK</a>
+        <a href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer" class="mobile-link mt-8 bg-gold text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition">Időpontot foglalok</a>
     </div>
 
-    <!-- Desktop image column -->
-    <div class="hidden md:block relative group hero-anim anim-scale d5">
-        <div class="absolute inset-0 bg-primary/28 blur-[70px] rounded-full group-hover:bg-primary/38 transition-all duration-700"></div>
-        <div class="relative z-10 w-4/5 aspect-[3/4]">
-            <div class="img-corner img-corner-tr" aria-hidden="true"></div>
-            <div class="img-corner img-corner-bl" aria-hidden="true"></div>
-            <div class="w-full h-full overflow-hidden border border-primary/30 shadow-2xl">
-                <img
-                    alt="Profiborbély vintage aranyollóval precíz hajvágást végez — drámai fényezés, sötét textúrált téglafal háttér"
-                    class="w-full h-full object-cover"
-                    width="600"
-                    height="800"
-                    src="images/barber.png"/>
-            </div>
-        </div>
-    </div>
-</div>
+    <header class="relative min-h-[90vh] flex items-center pt-24 md:pt-20 bg-darker border-b border-bordercolor">
+        <div class="absolute inset-0 bg-cover opacity-30" style="background-image: url('images/barber.png'); background-position: center 10%;"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-darker via-darker/90 md:via-darker/80 to-transparent"></div>
 
-<!-- Scroll indicator -->
-<div class="hero-anim anim-up d6 hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-40 z-20">
-    <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant" style="font-size:10px">Görgess</span>
-    <div class="w-[1px] h-8 bg-primary/60 animate-pulse"></div>
-</div>
-</section>
-
-<!-- ── Rólunk Section ─────────────────────────────────────────── -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-lowest" id="about">
-<div class="max-w-[1200px] mx-auto px-margin md:px-gutter">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-    <div class="md:col-span-5 mb-8 md:mb-0 anim anim-left">
-        <img
-            alt="Golden Hand's Barbershop logó"
-            class="w-full shadow-2xl"
-            width="600"
-            height="600"
-            loading="lazy"
-            src="images/logo.jpg"/>
-    </div>
-    <div class="md:col-span-7 md:pl-12 space-y-6">
-        <div class="flex items-center gap-4 text-primary anim anim-up">
-            <span class="h-[1px] w-12 bg-primary"></span>
-            <span class="font-label-sm text-label-sm uppercase tracking-widest">A mi történetünk</span>
-        </div>
-        <h2 class="font-headline-lg text-headline-lg md:text-[48px] serif anim anim-up d1">Mesterség, nem rutin.</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed anim anim-up d2">
-            Győr szívében dolgozunk, ahol a klasszikus borbélyhagyomány nem múlt, hanem mérce. Precíz vágás, forró törülközős rituálé, gondosan kiválasztott eszközök. Minden szék mögött tapasztalat áll, minden időpont mögött figyelem.
-        </p>
-    </div>
-</div>
-</div>
-</section>
-
-<!-- ── Szolgáltatások Section ────────────────────────────────── -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop bg-background brick-texture" id="services">
-<div class="max-w-[800px] mx-auto px-margin md:px-gutter text-center mb-16">
-    <h2 class="font-headline-lg text-headline-lg md:text-[40px] serif mb-4 anim anim-up">Szolgáltatásaink</h2>
-    <div class="flex items-center justify-center gap-4 text-primary mb-8 anim anim-up d1">
-        <span class="material-symbols-outlined" data-icon="star">star</span>
-        <span class="w-24 h-[1px] bg-primary"></span>
-        <span class="material-symbols-outlined" data-icon="star">star</span>
-    </div>
-</div>
-<div class="max-w-[900px] mx-auto px-margin md:px-gutter space-y-12">
-
-    <!-- Hajvágás -->
-    <div class="anim anim-up">
-        <div class="flex items-center gap-4 mb-6">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Hajvágás</span>
-            <span class="flex-1 h-[1px] bg-primary/20"></span>
-        </div>
-        <div class="space-y-5">
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Hajvágás</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">6 500 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Hosszú hajvágás (20cm felett)</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">9 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Egy hossz hajvágás</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">4 800 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Gyerek hajvágás</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">5 500 Ft</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Szakáll -->
-    <div class="anim anim-up d1">
-        <div class="flex items-center gap-4 mb-6">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Szakáll</span>
-            <span class="flex-1 h-[1px] bg-primary/20"></span>
-        </div>
-        <div class="space-y-5">
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Szakáll vágás / igazítás</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">5 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Haj & Szakáll</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">10 500 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Hajvágás & Szakállvágás & Szemöldök igazítás</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">13 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Hajvágás + Szemöldök szedés cérnával</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">8 000 Ft</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Festés -->
-    <div class="anim anim-up d2">
-        <div class="flex items-center gap-4 mb-6">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Festés</span>
-            <span class="flex-1 h-[1px] bg-primary/20"></span>
-        </div>
-        <div class="space-y-5">
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Haj festés (fekete/barna)</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">4 500 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Hajvágás + festés (fekete/barna)</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">11 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Szakáll festés</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">4 500 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Szakáll vágás + Festés</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">9 500 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Haj & Szakáll vágás + Hajfestés (fekete/barna)</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">15 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Haj & Szakáll vágás + Szakáll festés</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">15 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Haj & Szakáll vágás + Haj & Szakáll festés</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">18 500 Ft</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Szőkítés -->
-    <div class="anim anim-up d3">
-        <div class="flex items-center gap-4 mb-6">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Szőkítés</span>
-            <span class="flex-1 h-[1px] bg-primary/20"></span>
-        </div>
-        <div class="space-y-5">
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Teljes szőkítés / Fehér</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">27 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Teljes szőkítés / Fehér + Hajvágás</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">34 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Teljes szőkítés / Fehér + Haj & Szakáll</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">38 000 Ft</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Dauer -->
-    <div class="anim anim-up d4">
-        <div class="flex items-center gap-4 mb-6">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Dauer</span>
-            <span class="flex-1 h-[1px] bg-primary/20"></span>
-        </div>
-        <div class="space-y-5">
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Dauer (csak a felső haj)</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">16 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Teljes Dauer (oldalt is)</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">21 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Dauer + Hajvágás</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">22 500 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Teljes Dauer (oldalt is) + Hajvágás</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">27 500 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Dauer + Haj & Szakáll</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">26 500 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Teljes Dauer (oldalt is) + Haj & Szakáll</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">31 300 Ft</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Melit -->
-    <div class="anim anim-up d5">
-        <div class="flex items-center gap-4 mb-6">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Melit</span>
-            <span class="flex-1 h-[1px] bg-primary/20"></span>
-        </div>
-        <div class="space-y-5">
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Melit</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">27 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Melit + Hajvágás</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">33 000 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Melit + Haj & Szakáll</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">37 000 Ft</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Kiegészítők -->
-    <div class="anim anim-up d6">
-        <div class="flex items-center gap-4 mb-6">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Kiegészítők</span>
-            <span class="flex-1 h-[1px] bg-primary/20"></span>
-        </div>
-        <div class="space-y-5">
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Szemöldök szedés cérnával</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">1 700 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Orr szőr gyanta</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">1 500 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Hajvágás & orr szőr gyanta</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">8 700 Ft</span>
-            </div>
-            <div class="flex items-end justify-between group cursor-default">
-                <span class="text-[18px] md:text-[20px] serif group-hover:text-primary transition-colors">Haj & Szakáll vágás & orr szőr gyanta</span>
-                <div class="service-dots shrink-0"></div>
-                <span class="text-[18px] md:text-[20px] text-primary serif shrink-0">12 500 Ft</span>
-            </div>
-        </div>
-    </div>
-
-</div>
-<div class="mt-16 flex justify-center anim anim-up d4">
-    <a class="border border-primary text-primary px-12 py-4 font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300" href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer">
-        Foglalj időpontot
-    </a>
-</div>
-</section>
-
-<!-- ── Galéria Section ───────────────────────────────────────── -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-lowest" id="gallery">
-<div class="max-w-[1200px] mx-auto px-margin md:px-gutter">
-    <div class="flex flex-col items-center mb-12">
-        <h2 class="font-headline-lg text-headline-lg serif mb-4 text-center anim anim-up">Referenciáink</h2>
-        <p class="font-body-md text-body-md text-on-surface-variant text-center max-w-lg anim anim-up d1">Válogatás borbélyaink legfrissebb munkáiból.</p>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-gutter">
-        <div class="aspect-square overflow-hidden gold-border-gradient border anim anim-scale">
-            <img alt="Golden Hand's borbélyüzlet referencia munkája" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-pointer" loading="lazy" width="400" height="400" src="images/galeria.png"/>
-        </div>
-        <div class="aspect-square overflow-hidden gold-border-gradient border anim anim-scale d1">
-            <img alt="Golden Hand's borbélyüzlet referencia munkája" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-pointer" loading="lazy" width="400" height="400" src="images/galeria2.jpeg"/>
-        </div>
-        <div class="aspect-square overflow-hidden gold-border-gradient border anim anim-scale d2">
-            <img alt="Golden Hand's borbélyüzlet referencia munkája" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-pointer" loading="lazy" width="400" height="400" src="images/galeria3.jpeg"/>
-        </div>
-        <div class="aspect-square overflow-hidden gold-border-gradient border anim anim-scale">
-            <img alt="Golden Hand's borbélyüzlet referencia munkája" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-pointer" loading="lazy" width="400" height="400" src="images/galeria4.jpeg"/>
-        </div>
-        <div class="aspect-square overflow-hidden gold-border-gradient border anim anim-scale d1">
-            <img alt="Golden Hand's borbélyüzlet referencia munkája" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-pointer" loading="lazy" width="400" height="400" src="images/galeria5.jpeg"/>
-        </div>
-        <div class="aspect-square overflow-hidden gold-border-gradient border anim anim-scale d2">
-            <img alt="Golden Hand's borbélyüzlet referencia munkája" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700 cursor-pointer" loading="lazy" width="400" height="400" src="images/galeria6.jpeg"/>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- ── Kapcsolat & Nyitvatartás Section ──────────────────────── -->
-<section class="py-section-padding-mobile md:py-section-padding-desktop bg-background brick-texture" id="contact">
-<div class="max-w-[1200px] mx-auto px-margin md:px-gutter">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-section-padding-mobile">
-    <div class="space-y-8">
-        <h2 class="font-headline-lg text-headline-lg serif mb-8 anim anim-up">Lépj velünk kapcsolatba</h2>
-        <div class="flex items-center gap-6 anim anim-up d1">
-            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-none border border-primary/20">
-                <span class="material-symbols-outlined" data-icon="call">call</span>
-            </div>
-            <div>
-                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Időpontfoglalás</p>
-                <a href="tel:+36301385386" class="font-headline-lg text-headline-lg serif hover:text-primary transition-colors duration-300">(30) 138 5386</a>
-            </div>
-        </div>
-        <div class="flex items-center gap-6 anim anim-up d2">
-            <div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-none border border-primary/20">
-                <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-            </div>
-            <div>
-                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Helyszín</p>
-                <p class="font-body-md text-body-md">9024 Győr, Eörsy Péter utca 26.</p>
-            </div>
-        </div>
-        <div class="pt-8 anim anim-up d3">
-            <h3 class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-primary mb-6">Nyitvatartás</h3>
-            <div class="space-y-2 max-w-sm">
-                <div class="flex justify-between border-b border-outline-variant/30 pb-2">
-                    <span class="font-body-md text-body-md">Hétfő - Péntek</span>
-                    <span class="font-body-md text-body-md font-bold">09:00 - 20:00</span>
-                </div>
-                <div class="flex justify-between border-b border-outline-variant/30 pb-2">
-                    <span class="font-body-md text-body-md">Szombat</span>
-                    <span class="font-body-md text-body-md font-bold">10:00 - 16:00</span>
-                </div>
-                <div class="flex justify-between pb-2">
-                    <span class="font-body-md text-body-md">Vasárnap</span>
-                    <span class="font-body-md text-body-md text-error/60">Zárva</span>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 w-full flex flex-col lg:flex-row justify-between items-center">
+            <div class="max-w-2xl text-center lg:text-left mt-10 lg:mt-0">
+                <p class="text-gray-400 text-[10px] md:text-[11px] font-bold tracking-[0.25em] mb-4 uppercase">Győr Barbershop</p>
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-6">
+                    <span class="text-white block whitespace-nowrap text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl">Golden Hand'S</span>
+                    <span class="text-gold block whitespace-nowrap text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl">Barbershop.</span>
+                </h1>
+                <p class="text-gray-400 text-xs md:text-sm max-w-md mx-auto lg:mx-0 mb-8 md:mb-10 leading-relaxed font-light">
+                    Precíz átmenetek, pengeéles vonalak, szakértő kezek. Győr legmenőbb borbélyüzlete, ahol nem siettetünk – minden vágásra időt szánunk, hogy a végeredmény tökéletes legyen.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
+                    <a href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-6 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition text-center flex justify-center items-center gap-2">
+                       Időpontot foglalok &rarr;
+                    </a>
+                    <a href="tel:+36301385386" class="border border-gold text-gold px-6 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition text-center flex justify-center items-center gap-2">
+                        &#9990; +36 30 138 5386
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="flex flex-col h-full anim anim-right">
-        <div class="w-full h-80 bg-surface-container-high border border-outline-variant/30 grayscale hover:grayscale-0 transition-all duration-500 overflow-hidden relative mb-8">
-            <div class="absolute inset-0 flex items-center justify-center">
-                <span class="material-symbols-outlined text-primary text-4xl" data-icon="map">map</span>
+    </header>
+
+    <section id="about" class="py-16 md:py-24 bg-[#0d0d0d] border-b border-bordercolor">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div class="relative h-[300px] sm:h-[400px] md:h-[500px] w-full bg-card overflow-hidden border border-bordercolor order-2 lg:order-1">
+                <img src="images/logo.jpg" alt="Golden Hand's Barbershop" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition duration-700">
             </div>
-            <img alt="Budapest térkép részlet, Andrássy út 1. környéke" class="w-full h-full object-cover opacity-50" width="600" height="320" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeNSm6D7xkKU-sWEMEg1eiB7kWTCkqMhI-NQXGTO1jKr3CEgI5Tfq45xLmTn7gi5YCZHHOIRVXwxQYtGd2_J2DJ6rJXQ9VzginenI18Ilms2-2oyL2LZPyJxsHxhhm8YbBkDUiTiUZm3PytX3ejsYOQ88YKjEdotH1qyI6YCnozLj58svM04UOIZzaigwTzkPsHR6M4FaxsOk7YXjIoyVBkULuwd00F_Ia0y0iWciyyiickygIehsMZgucb3mwMEYqkjIJpoXFEUA"/>
+
+            <div class="order-1 lg:order-2">
+                <p class="text-gray-500 text-[10px] font-bold tracking-[0.2em] mb-3 uppercase">Több mint egy borbélyüzlet</p>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-6 leading-[1.1]">
+                    Ahol a szakma<br>és a kultúra találkozik
+                </h2>
+                <div class="space-y-4 md:space-y-5 text-gray-400 text-xs md:text-sm leading-relaxed mb-8 md:mb-10 font-light">
+                    <p><strong class="text-white font-semibold">A Golden Hand'S Barbershop nem csak egy hely, ahol levágják a hajad.</strong> Itt beülsz a székbe, dumálsz a srácokkal, és a legjobb formádban távozol.</p>
+                    <p>A 2025-ös alapításunk óta hírnevet szereztünk a precíz átmeneteinkkel és azzal a hangulattal, ami miatt mindig visszatérsz. Nálunk minden vágás egy beszélgetés, minden átmenet egy művészet.</p>
+                </div>
+                <div class="grid grid-cols-3 gap-4 md:gap-6 pt-6 border-t border-bordercolor">
+                    <div>
+                        <div class="text-xl md:text-2xl font-black text-gold mb-1">10+</div>
+                        <div class="text-[8px] md:text-[9px] font-bold text-gray-500 uppercase tracking-widest">Év a szakmában</div>
+                    </div>
+                    <div>
+                        <div class="text-xl md:text-2xl font-black text-gold mb-1">1000+</div>
+                        <div class="text-[8px] md:text-[9px] font-bold text-gray-500 uppercase tracking-widest">Elkészített átmenet</div>
+                    </div>
+                    <div>
+                        <div class="text-xl md:text-2xl font-black text-gold mb-1">4.9</div>
+                        <div class="text-[8px] md:text-[9px] font-bold text-gray-500 uppercase tracking-widest">Google értékelés</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bg-surface-container-low p-8 border border-primary/20">
-            <h3 class="font-headline-lg text-headline-lg serif mb-6">Foglalj most</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                Válaszd ki az első szabad időpontot az online naptárban.
-            </p>
-            <a href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer" class="w-full bg-primary text-on-primary-container px-8 py-5 font-label-sm text-label-sm uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-3">
-                <span class="material-symbols-outlined" data-icon="event">event</span>
-                Naptár megnyitása
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-darker border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-10 md:mb-14">
+                <p class="text-gray-500 text-[10px] font-bold tracking-[0.2em] mb-2 uppercase">Teljes árlista</p>
+                <h2 class="text-3xl font-black uppercase tracking-tight text-white">Szolgáltatások</h2>
+            </div>
+
+            <!-- Hajvágás -->
+            <div class="mb-10 md:mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Hajvágás</span>
+                    <span class="flex-1 h-px bg-bordercolor"></span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-6 md:gap-y-8">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h3 class="text-sm font-bold text-white uppercase tracking-wider">Hajvágás</h3>
+                                <span class="bg-gold text-black text-[8px] font-black px-1.5 py-0.5 uppercase tracking-wider">Népszerű</span>
+                            </div>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">6 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">Prémium hajvágás, ahol a részletek számítanak. Tökéletes átmenetek, letisztult forma. (30 perc)</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Hosszú hajvágás (20cm felett)</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">9 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">45 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Egy hossz hajvágás</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">4 800 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">15 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Gyerek hajvágás</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">5 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">30 perc</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Szakáll & Kombinációk -->
+            <div class="mb-10 md:mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Szakáll & Kombinációk</span>
+                    <span class="flex-1 h-px bg-bordercolor"></span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-6 md:gap-y-8">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Szakáll vágás / igazítás</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">5 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">20 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h3 class="text-sm font-bold text-white uppercase tracking-wider">Haj & Szakáll</h3>
+                                <span class="bg-gold text-black text-[8px] font-black px-1.5 py-0.5 uppercase tracking-wider">Népszerű</span>
+                            </div>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">10 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">Prémium haj- és szakállformázás. Tökéletes fade, precíz kontúrozás. (45 perc)</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Hajvágás + Szemöldök szedés cérnával</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">8 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">40 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Hajvágás & Szakállvágás & Szemöldök igazítás</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">13 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">45 perc</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Festés -->
+            <div class="mb-10 md:mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Festés</span>
+                    <span class="flex-1 h-px bg-bordercolor"></span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-6 md:gap-y-8">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Haj festés (fekete/barna)</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">4 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">20 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Hajvágás + festés (fekete/barna)</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">11 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">1 óra</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Szakáll festés</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">4 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">30 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Szakáll vágás + Festés</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">9 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">40 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Haj & Szakáll vágás + Hajfestés</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">15 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">Fekete/barna. 1 óra 10 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Haj & Szakáll vágás + Szakáll festés</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">15 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">1 óra 10 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Haj & Szakáll vágás + Haj & Szakáll festés</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">18 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">Fekete/barna. 1 óra 30 perc</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Szőkítés -->
+            <div class="mb-10 md:mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Szőkítés</span>
+                    <span class="flex-1 h-px bg-bordercolor"></span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-6 md:gap-y-8">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Teljes szőkítés / Fehér</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">27 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">2 óra</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Teljes szőkítés / Fehér + Hajvágás</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">34 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">2 óra 15 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Teljes szőkítés / Fehér + Haj & Szakáll</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">38 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">2 óra 30 perc</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dauer -->
+            <div class="mb-10 md:mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Dauer</span>
+                    <span class="flex-1 h-px bg-bordercolor"></span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-6 md:gap-y-8">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Dauer (csak a felső haj)</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">16 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">Tartós dauer a kívánt hullámos vagy göndör hatáshoz. (1 óra 15 perc)</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Teljes Dauer (oldalt is)</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">21 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">Tartós dauer a kívánt hullámos vagy göndör hatáshoz. (1 óra 45 perc)</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Dauer + Hajvágás</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">22 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">1 óra 40 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Teljes Dauer + Hajvágás</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">27 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">Prémium dauer + hajvágás. Tartós hullámok, tökéletes forma. (2 óra 15 perc)</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Dauer + Haj & Szakáll</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">26 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">2 óra 15 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Teljes Dauer + Haj & Szakáll</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">31 300 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">2 óra 35 perc</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Melit -->
+            <div class="mb-10 md:mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Melit</span>
+                    <span class="flex-1 h-px bg-bordercolor"></span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-6 md:gap-y-8">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Melit</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">27 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">1 óra 45 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Melit + Hajvágás</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">33 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">2 óra 25 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Melit + Haj & Szakáll</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">37 000 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">2 óra 30 perc</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kiegészítők -->
+            <div class="mb-10 md:mb-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="text-[9px] font-black text-gold uppercase tracking-[0.2em]">Kiegészítők</span>
+                    <span class="flex-1 h-px bg-bordercolor"></span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-12 gap-y-6 md:gap-y-8">
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Szemöldök szedés cérnával</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">1 700 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">10 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Orr szőr gyanta</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">1 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">5 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Hajvágás & orr szőr gyanta</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">8 700 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">30 perc</p>
+                    </div>
+                    <div class="border-b border-bordercolor pb-4 md:pb-5">
+                        <div class="flex justify-between items-start mb-2 gap-2">
+                            <h3 class="text-sm font-bold text-white uppercase tracking-wider">Haj & Szakáll vágás & orr szőr gyanta</h3>
+                            <div class="text-lg font-black text-gold whitespace-nowrap">12 500 Ft</div>
+                        </div>
+                        <p class="text-[10px] md:text-[11px] text-gray-500 leading-relaxed">45 perc</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 flex justify-center">
+                <a href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-10 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition">
+                    Foglalj időpontot &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-16 md:py-24 bg-[#0d0d0d] border-b border-bordercolor">
+        <div class="max-w-5xl mx-auto px-4 md:px-6 text-center">
+            <p class="text-gray-500 text-[10px] font-bold tracking-[0.2em] mb-2 uppercase">Vágások</p>
+            <h2 class="text-3xl font-black uppercase tracking-tight text-white mb-8 md:mb-12">A Portfólió</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-2 mb-8 md:mb-10">
+                <img src="images/galeria.png"   alt="Vágás 1" class="w-full aspect-square object-cover hover:opacity-80 transition duration-300">
+                <img src="images/galeria2.jpeg" alt="Vágás 2" class="w-full aspect-square object-cover hover:opacity-80 transition duration-300">
+                <img src="images/galeria3.jpeg" alt="Vágás 3" class="w-full aspect-square object-cover hover:opacity-80 transition duration-300">
+                <img src="images/galeria4.jpeg" alt="Vágás 4" class="w-full aspect-square object-cover hover:opacity-80 transition duration-300">
+                <img src="images/galeria5.jpeg" alt="Vágás 5" class="w-full aspect-square object-cover hover:opacity-80 transition duration-300">
+                <img src="images/galeria6.jpeg" alt="Vágás 6" class="w-full aspect-square object-cover hover:opacity-80 transition duration-300">
+            </div>
+
+            <a href="https://lapatrico.salonic.hu/?fbclid=IwY2xjawSnChNleHRuA2FlbQIxMABicmlkETFFZ3Bua2NHVktTWW54SDZxc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgDnV1tTVEuMy6oBDsvKLZm1zaCWxH95J8XeuI7lympiTcnW6ZeHqJOZ4UMd_aem_VeRqma_VMcP_NDgpm5Enrg" target="_blank" rel="noopener noreferrer" class="text-gray-400 text-[10px] font-bold uppercase tracking-[0.2em] hover:text-gold transition border-b border-gray-800 pb-1 inline-block">
+                Foglalj időpontot &rarr;
             </a>
         </div>
-    </div>
-</div>
-</div>
-</section>
-</main>
+    </section>
 
-<!-- ── Footer ────────────────────────────────────────────────── -->
-<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-primary/20 w-full pt-section-padding-mobile md:pt-section-padding-desktop pb-margin">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin md:px-gutter max-w-[1200px] mx-auto">
-    <div class="md:col-span-4 mb-8 md:mb-0">
-        <div class="font-headline-lg text-headline-lg text-primary serif mb-4">GOLDEN HAND'S</div>
-        <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
-            Prémium borbély élmény Győr szívében. Precizitás, stílus és minőség minden vágásnál.
-        </p>
-    </div>
-    <div class="md:col-span-4 mb-8 md:mb-0">
-        <h4 class="font-label-sm text-label-sm uppercase text-primary mb-6">Linkek</h4>
-        <ul class="space-y-4">
-            <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#about">Rólunk</a></li>
-            <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#services">Szolgáltatások</a></li>
-            <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#gallery">Galéria</a></li>
-            <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#contact">Kapcsolat</a></li>
-        </ul>
-    </div>
-    <div class="md:col-span-4">
-        <h4 class="font-label-sm text-label-sm uppercase text-primary mb-6">Kövess minket</h4>
-        <div class="flex gap-4">
-            <a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="https://www.tiktok.com/@la_patrico_cut" target="_blank" rel="noopener noreferrer" aria-label="TikTok: @la_patrico_cut">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
-            </a>
-            <a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-all" href="https://www.facebook.com/profile.php?id=61576725628096&sk=photos" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-            </a>
+    <section id="barber" class="py-16 md:py-24 bg-darker border-b border-bordercolor">
+        <div class="max-w-5xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="aspect-square md:aspect-[4/5] bg-card border border-bordercolor overflow-hidden w-full max-w-md mx-auto md:max-w-full">
+                <img src="images/barber.png" alt="Mihácsi Patrik" class="w-full h-full object-cover hover:opacity-90 transition duration-500">
+            </div>
+
+            <div class="text-center md:text-left">
+                <p class="text-gray-500 text-[10px] font-bold tracking-[0.2em] mb-2 uppercase">Ember a szék mögött</p>
+                <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white mb-1">Mihácsi Patrik – La Patrico</h2>
+                <p class="text-gold text-[10px] font-bold tracking-widest uppercase mb-6 md:mb-8">Tulajdonos & Alapító</p>
+
+                <div class="space-y-4 text-gray-400 text-xs md:text-sm leading-relaxed font-light mb-8 text-left">
+                    <p>24 éves vagyok, és 17 éves koromban kezdtem el a borbély szakmát. A hajvágás művészetét Németországban sajátítottam el egy tapasztalt arab mestertől, aki megtanított a precizitásra, a szakma tiszteletére és a részletek fontosságára.</p>
+                    <p>Ma büszkén vagyok a Golden Hand's Barbershop – La Patrico tulajdonosa, ahol célom, hogy minden vendég a lehető legjobb szolgáltatást kapja. Hiszek a kemény munkában, a folyamatos fejlődésben és abban, hogy a siker egyik alapja az emberek tisztelete.</p>
+                    <p>Szeretek segíteni másokon, jót tenni, és olyan környezetet teremteni, ahol mindenki jól érzi magát. Számomra a borbély szakma nem csak munka, hanem hivatás és szenvedély.</p>
+                </div>
+
+                <div class="flex flex-wrap gap-3 md:gap-4 justify-center md:justify-start">
+                    <span class="flex items-center gap-1.5 text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest border border-bordercolor px-2 md:px-3 py-1.5">
+                        <span class="text-gold text-sm">&#10003;</span> Mesterborbély
+                    </span>
+                    <span class="flex items-center gap-1.5 text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest border border-bordercolor px-2 md:px-3 py-1.5">
+                        <span class="text-gold text-sm">&#10003;</span> 7 Év Tapasztalat
+                    </span>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="md:col-span-12 border-t border-outline-variant/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="font-label-sm text-label-sm text-on-surface-variant">© <span id="copyright-year">2026</span> Golden Hand's Barbershop. Minden jog fenntartva.</p>
-        <div class="flex gap-6">
-            <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary underline" href="#">Adatvédelem</a>
-            <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="#">ÁSZF</a>
-            <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary" href="#">Impresszum</a>
+    </section>
+
+    <section id="reviews" class="py-16 md:py-24 bg-[#0d0d0d] border-b border-bordercolor">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-10 md:mb-16">
+                <p class="text-gray-500 text-[10px] font-bold tracking-[0.2em] mb-2 uppercase">Vendégeink mondták</p>
+                <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white mb-3">Vendégértékelések</h2>
+                <div class="flex items-center justify-center gap-1 text-gold text-sm mb-2">
+                    &#9733; &#9733; &#9733; &#9733; &#9733;
+                </div>
+                <p class="text-[9px] md:text-[10px] text-gray-500 tracking-widest uppercase">4.9 Csillag · 137 Google értékelés alapján</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="bg-card p-6 md:p-8 border border-bordercolor flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold text-xs mb-3 md:mb-4">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                        <p class="text-gray-400 text-[11px] md:text-xs leading-relaxed italic mb-6">"Már évek óta csak ide járok. Senki másra nem bíznám az átmenetemet. Patrik igazi maximalista – minden alkalommal hibátlan frizurával távozom. Kétségtelenül a legjobb borbélyüzlet a városban."</p>
+                    </div>
+                    <p class="text-white text-[10px] md:text-[11px] font-bold uppercase tracking-wider">K. Gábor</p>
+                </div>
+                <div class="bg-card p-6 md:p-8 border border-bordercolor flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold text-xs mb-3 md:mb-4">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                        <p class="text-gray-400 text-[11px] md:text-xs leading-relaxed italic mb-6">"Elhoztam a fiamat az első igazi hajvágására, és hatalmas élmény volt számára. Türelmesek és barátságosak voltak, a vágás pedig elképesztően precíz lett. Most már mindketten törzsvendégek vagyunk."</p>
+                    </div>
+                    <p class="text-white text-[10px] md:text-[11px] font-bold uppercase tracking-wider">L. Dávid</p>
+                </div>
+                <div class="bg-card p-6 md:p-8 border border-bordercolor flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold text-xs mb-3 md:mb-4">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+                        <p class="text-gray-400 text-[11px] md:text-xs leading-relaxed italic mb-6">"Sok borbélynál megfordultam már, de egyik sem ér ennek a helynek a nyomába. Itt tényleg odafigyelnek arra, hogy mit szeretnél, és jobban valósítják meg, mint ahogy elképzelted. A hely hangulata zseniális."</p>
+                    </div>
+                    <p class="text-white text-[10px] md:text-[11px] font-bold uppercase tracking-wider">R. Máté</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</footer>
+    </section>
 
-<script>
-        // Copyright year
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    <footer class="bg-darker pt-16 md:pt-20 pb-8 md:pb-10">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 mb-12 md:mb-16">
+            <div class="sm:col-span-2 text-center sm:text-left">
+                <div class="text-xl md:text-2xl font-black tracking-[0.15em] text-white uppercase mb-4">
+                    Golden Hand's Barbershop
+                </div>
+                <p class="text-gray-500 text-[11px] md:text-xs leading-relaxed max-w-sm mx-auto sm:mx-0 mb-6">Precíz bőrátmenetek, éles kontúrok és szakértő szakálligazítás. Ahol minden vágás egy alkotás, és sosem kapkodunk.</p>
+                <div class="flex gap-4 justify-center sm:justify-start">
+                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-card border border-bordercolor hover:border-gold transition text-gray-400 hover:text-gold text-xs">Ig</a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center bg-card border border-bordercolor hover:border-gold transition text-gray-400 hover:text-gold text-xs">Fb</a>
+                </div>
+            </div>
 
-        // ── Hero animations (fire on load) ───────────────────────
-        window.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.hero-anim').forEach(el => {
-                // Small rAF delay so CSS is fully parsed before transition starts
-                requestAnimationFrame(() => requestAnimationFrame(() => {
-                    el.classList.add('revealed');
-                }));
-            });
-        });
+            <div class="text-center sm:text-left">
+                <h4 class="text-white text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase mb-4 md:mb-5">Navigáció</h4>
+                <ul class="space-y-3 text-[11px] md:text-xs text-gray-500">
+                    <li><a href="#about" class="hover:text-gold transition">Rólunk</a></li>
+                    <li><a href="#services" class="hover:text-gold transition">Szolgáltatások és Árak</a></li>
+                    <li><a href="#portfolio" class="hover:text-gold transition">Galéria</a></li>
+                    <li><a href="#reviews" class="hover:text-gold transition">Értékelések</a></li>
+                </ul>
+            </div>
 
-        // ── Scroll animations (Intersection Observer) ───────────
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    observer.unobserve(entry.target);
+            <div class="text-center sm:text-left">
+                <h4 class="text-white text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase mb-4 md:mb-5">Kapcsolat</h4>
+                <ul class="space-y-3 text-[11px] md:text-xs text-gray-500 inline-block text-left">
+                    <li class="flex items-start gap-2">
+                        <span class="text-gold mt-0.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </span>
+                        <span>Győr, Eőrsy Péter u. 26, 9024</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-gold">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </span>
+                        <a href="tel:+36301385386" class="hover:text-gold transition">+36 30 138 5386</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-gold">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </span>
+                        <span>info@goldenhands.hu</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 md:px-6 border-t border-bordercolor pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center text-[9px] md:text-[10px] text-gray-600 tracking-widest uppercase text-center md:text-left gap-4 md:gap-0">
+            <p>&copy; 2026 Golden Hand's Barbershop. Minden jog fenntartva.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-gray-400 transition">Adatvédelmi Tájékoztató</a>
+                <a href="#" class="hover:text-gray-400 transition">ÁSZF</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+            const links = document.querySelectorAll('.mobile-link');
+            let menuOpen = false;
+
+            function toggleMenu() {
+                menuOpen = !menuOpen;
+                if (menuOpen) {
+                    menu.classList.remove('translate-x-full');
+                    menu.classList.add('translate-x-0');
+                    document.body.style.overflow = 'hidden';
+                    iconOpen.classList.add('opacity-0');
+                    iconClose.classList.remove('opacity-0');
+                } else {
+                    menu.classList.add('translate-x-full');
+                    menu.classList.remove('translate-x-0');
+                    document.body.style.overflow = '';
+                    iconOpen.classList.remove('opacity-0');
+                    iconClose.classList.add('opacity-0');
                 }
-            });
-        }, {
-            threshold: 0.12,
-            rootMargin: '0px 0px -40px 0px'
-        });
+            }
 
-        document.querySelectorAll('.anim').forEach(el => observer.observe(el));
-
-        // ── Mobile menu toggle ───────────────────────────────────
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('mobile-menu-icon');
-
-        menuBtn.addEventListener('click', () => {
-            const isOpen = !mobileMenu.classList.contains('hidden');
-            mobileMenu.classList.toggle('hidden', isOpen);
-            menuBtn.setAttribute('aria-expanded', String(!isOpen));
-            menuIcon.textContent = isOpen ? 'menu' : 'close';
-        });
-
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuBtn.setAttribute('aria-expanded', 'false');
-                menuIcon.textContent = 'menu';
-            });
-        });
-
-        // ── Scroll spy ───────────────────────────────────────────
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-
-            let current = '';
-            sections.forEach(section => {
-                if (window.scrollY >= (section.offsetTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1');
-                link.classList.add('text-on-surface-variant');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('text-primary', 'border-b-2', 'border-primary', 'pb-1');
-                    link.classList.remove('text-on-surface-variant');
-                }
-            });
+            if (btn && menu) btn.addEventListener('click', toggleMenu);
+            links.forEach(link => link.addEventListener('click', () => { if (menuOpen) toggleMenu(); }));
         });
     </script>
-</body></html>
+</body>
+</html>
