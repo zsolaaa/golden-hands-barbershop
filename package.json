@@ -1,0 +1,25 @@
+{
+  "name": "golden-hand",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsolaaa/golden-hands-barbershop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zsolaaa/golden-hands-barbershop/issues"
+  },
+  "homepage": "https://github.com/zsolaaa/golden-hands-barbershop#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

@@ -54,25 +54,7 @@
       ]
     }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#cba358',
-                        dark: '#111111',
-                        darker: '#080808',
-                        card: '#181818',
-                        bordercolor: '#2a2a2a'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         body { background-color: #080808; color: #ffffff; overflow-x: hidden; }
@@ -120,7 +102,7 @@
     </div>
 
     <header class="relative min-h-[90vh] flex items-center pt-24 md:pt-20 bg-darker border-b border-bordercolor">
-        <div class="absolute inset-0 bg-cover opacity-30" style="background-image: url('images/barber.png'); background-position: center 10%;"></div>
+        <div class="absolute inset-0 bg-cover opacity-30" style="background-image: url('images/barber.webp'); background-position: center 10%;"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-darker via-darker/90 md:via-darker/80 to-transparent"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 w-full flex flex-col lg:flex-row justify-between items-center">
@@ -530,7 +512,7 @@
     <section id="barber" class="py-16 md:py-24 bg-darker border-b border-bordercolor">
         <div class="max-w-5xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div class="aspect-square md:aspect-[4/5] bg-card border border-bordercolor overflow-hidden w-full max-w-md mx-auto md:max-w-full">
-                <img src="images/barber.png" alt="Mihácsi Patrik" class="w-full h-full object-cover hover:opacity-90 transition duration-500">
+                <img src="images/barber.webp" alt="Mihácsi Patrik" class="w-full h-full object-cover hover:opacity-90 transition duration-500">
             </div>
 
             <div class="text-center md:text-left">
@@ -563,7 +545,7 @@
                 <h2 class="text-3xl font-black uppercase tracking-tight text-white">A Csapat</h2>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
 
                 <!-- Mihácsi Patrik -->
                 <div class="bg-card border border-gold/40 flex flex-col">
