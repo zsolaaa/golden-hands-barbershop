@@ -59,6 +59,30 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         body { background-color: #080808; color: #ffffff; overflow-x: hidden; }
         .neon-text { text-shadow: 0 0 15px rgba(203, 163, 88, 0.4); }
+
+        :root { --ease-out: cubic-bezier(0.22, 1, 0.36, 1); }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-tag  { animation: fadeUp 0.7s var(--ease-out) 0.05s both; }
+        .hero-h1-1 { animation: fadeUp 0.9s var(--ease-out) 0.2s  both; }
+        .hero-h1-2 { animation: fadeUp 0.9s var(--ease-out) 0.35s both; }
+        .hero-desc { animation: fadeUp 0.7s var(--ease-out) 0.5s  both; }
+        .hero-cta  { animation: fadeUp 0.7s var(--ease-out) 0.65s both; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-d1 { transition-delay: 80ms; }
+        .reveal-d2 { transition-delay: 160ms; }
+        .reveal-d3 { transition-delay: 240ms; }
+        .reveal-d4 { transition-delay: 320ms; }
     </style>
 </head>
 <body class="antialiased font-sans relative">
@@ -107,15 +131,15 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 w-full flex flex-col lg:flex-row justify-between items-center">
             <div class="max-w-2xl text-center lg:text-left mt-10 lg:mt-0">
-                <p class="text-gray-400 text-[10px] md:text-[11px] font-bold tracking-[0.25em] mb-4 uppercase">Győr Barbershop</p>
+                <p class="hero-tag text-gray-400 text-[10px] md:text-[11px] font-bold tracking-[0.25em] mb-4 uppercase">Győr Barbershop</p>
                 <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-6">
-                    <span class="text-white block whitespace-nowrap text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl">Golden Hand'S</span>
-                    <span class="text-gold block whitespace-nowrap text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl">Barbershop.</span>
+                    <span class="hero-h1-1 text-white block whitespace-nowrap text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl">Golden Hand'S</span>
+                    <span class="hero-h1-2 text-gold block whitespace-nowrap text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl">Barbershop.</span>
                 </h1>
-                <p class="text-gray-400 text-xs md:text-sm max-w-md mx-auto lg:mx-0 mb-8 md:mb-10 leading-relaxed font-light">
+                <p class="hero-desc text-gray-400 text-xs md:text-sm max-w-md mx-auto lg:mx-0 mb-8 md:mb-10 leading-relaxed font-light">
                     Precíz átmenetek, pengeéles vonalak, szakértő kezek. Győr legmenőbb borbélyüzlete, ahol nem siettetünk – minden vágásra időt szánunk, hogy a végeredmény tökéletes legyen.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
+                <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
                     <a href="https://lapatrico.salonic.hu/" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-6 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition text-center flex justify-center items-center gap-2">
                        Időpontot foglalok &rarr;
                     </a>
@@ -129,11 +153,11 @@
 
     <section id="about" class="py-16 md:py-24 bg-[#0d0d0d] border-b border-bordercolor">
         <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
-            <div class="relative h-[300px] sm:h-[400px] md:h-[500px] w-full bg-card overflow-hidden border border-bordercolor order-2 lg:order-1">
+            <div class="reveal relative h-[300px] sm:h-[400px] md:h-[500px] w-full bg-card overflow-hidden border border-bordercolor order-2 lg:order-1">
                 <img src="images/logo.jpg" alt="Golden Hand's Barbershop" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition duration-700">
             </div>
 
-            <div class="order-1 lg:order-2">
+            <div class="reveal reveal-d1 order-1 lg:order-2">
                 <p class="text-gray-500 text-[10px] font-bold tracking-[0.2em] mb-3 uppercase">Több mint egy borbélyüzlet</p>
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white mb-6 leading-[1.1]">
                     Ahol a szakma<br>és a kultúra találkozik
@@ -144,16 +168,16 @@
                 </div>
                 <div class="grid grid-cols-3 gap-4 md:gap-6 pt-6 border-t border-bordercolor">
                     <div>
-                        <div class="text-xl md:text-2xl font-black text-gold mb-1">10+</div>
-                        <div class="text-[8px] md:text-[9px] font-bold text-gray-500 uppercase tracking-widest">Év a szakmában</div>
+                        <div class="text-[9px] md:text-[10px] font-bold text-gold uppercase tracking-widest mb-1.5">Sosem siettetünk</div>
+                        <div class="text-[11px] md:text-xs text-white font-semibold leading-snug">Minden vendégnek saját idősávja van</div>
                     </div>
                     <div>
-                        <div class="text-xl md:text-2xl font-black text-gold mb-1">1000+</div>
-                        <div class="text-[8px] md:text-[9px] font-bold text-gray-500 uppercase tracking-widest">Elkészített átmenet</div>
-                    </div>
-                    <div>
-                        <div class="text-xl md:text-2xl font-black text-gold mb-1">4.9</div>
+                        <div class="text-xl md:text-2xl font-black text-gold mb-1">4.9 <span class="text-xs md:text-sm">★</span></div>
                         <div class="text-[8px] md:text-[9px] font-bold text-gray-500 uppercase tracking-widest">Google értékelés</div>
+                    </div>
+                    <div>
+                        <div class="text-[9px] md:text-[10px] font-bold text-gold uppercase tracking-widest mb-1.5">5 borbély</div>
+                        <div class="text-[11px] md:text-xs text-white font-semibold leading-snug">Mindenki megtalálja a sajátját</div>
                     </div>
                 </div>
             </div>
@@ -481,24 +505,24 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-2 mb-8 md:mb-10">
                 <!-- Feature image: full width mobile, 2×2 desktop -->
-                <div class="col-span-2 md:row-span-2 overflow-hidden aspect-[4/3] md:aspect-auto">
+                <div class="reveal col-span-2 md:row-span-2 overflow-hidden aspect-[4/3] md:aspect-auto">
                     <img src="images/galeria.png" alt="Vágás 1" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
                 <!-- Two small images stacked beside on desktop -->
-                <div class="aspect-square overflow-hidden">
+                <div class="reveal reveal-d1 aspect-square overflow-hidden">
                     <img src="images/galeria2.jpeg" alt="Vágás 2" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
-                <div class="aspect-square overflow-hidden">
+                <div class="reveal reveal-d2 aspect-square overflow-hidden">
                     <img src="images/galeria3.jpeg" alt="Vágás 3" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
                 <!-- Bottom row: 3 equal -->
-                <div class="aspect-square overflow-hidden">
+                <div class="reveal reveal-d1 aspect-square overflow-hidden">
                     <img src="images/galeria4.jpeg" alt="Vágás 4" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
-                <div class="aspect-square overflow-hidden">
+                <div class="reveal reveal-d2 aspect-square overflow-hidden">
                     <img src="images/galeria5.jpeg" alt="Vágás 5" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
-                <div class="aspect-square overflow-hidden">
+                <div class="reveal reveal-d3 aspect-square overflow-hidden">
                     <img src="images/galeria6.jpeg" alt="Vágás 6" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
             </div>
@@ -511,11 +535,11 @@
 
     <section id="barber" class="py-16 md:py-24 bg-darker border-b border-bordercolor">
         <div class="max-w-5xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div class="aspect-square md:aspect-[4/5] bg-card border border-bordercolor overflow-hidden w-full max-w-md mx-auto md:max-w-full">
+            <div class="reveal aspect-square md:aspect-[4/5] bg-card border border-bordercolor overflow-hidden w-full max-w-md mx-auto md:max-w-full">
                 <img src="images/barber.webp" alt="Mihácsi Patrik" class="w-full h-full object-cover hover:opacity-90 transition duration-500">
             </div>
 
-            <div class="text-center md:text-left">
+            <div class="reveal reveal-d1 text-center md:text-left">
                 <p class="text-gray-500 text-[10px] font-bold tracking-[0.2em] mb-2 uppercase">Ember a szék mögött</p>
                 <h2 class="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white mb-1">Mihácsi Patrik – La Patrico</h2>
                 <p class="text-gold text-[10px] font-bold tracking-widest uppercase mb-6 md:mb-8">Tulajdonos & Alapító</p>
@@ -548,7 +572,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
 
                 <!-- Mihácsi Patrik -->
-                <div class="bg-card border border-gold/40 flex flex-col">
+                <div class="reveal bg-card border border-gold/40 flex flex-col">
                     <div class="aspect-square overflow-hidden">
                         <img src="https://cdn.salonic.hu/12248/employees/160_ef9190698ea0a77151fd0328195711cd.png" alt="Mihácsi Patrik" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
@@ -561,7 +585,7 @@
                 </div>
 
                 <!-- Nyári Norbert -->
-                <div class="bg-card border border-bordercolor flex flex-col">
+                <div class="reveal reveal-d1 bg-card border border-bordercolor flex flex-col">
                     <div class="aspect-square overflow-hidden">
                         <img src="https://cdn.salonic.hu/12248/employees/160_33916f45ed2120933d108287b85643e0.png" alt="Nyári Norbert" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
@@ -574,7 +598,7 @@
                 </div>
 
                 <!-- Mága Rio -->
-                <div class="bg-card border border-bordercolor flex flex-col">
+                <div class="reveal reveal-d2 bg-card border border-bordercolor flex flex-col">
                     <div class="aspect-square overflow-hidden">
                         <img src="https://cdn.salonic.hu/12248/employees/160_4bbfeed8544ff19b811cce1675753251.png" alt="Mága Rio" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
@@ -587,7 +611,7 @@
                 </div>
 
                 <!-- Berki Béla -->
-                <div class="bg-card border border-bordercolor flex flex-col">
+                <div class="reveal reveal-d3 bg-card border border-bordercolor flex flex-col">
                     <div class="aspect-square overflow-hidden">
                         <img src="https://cdn.salonic.hu/12248/employees/160_eed982c0e48d3782ba35eeac47e56247.png" alt="Berki Béla" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
@@ -600,7 +624,7 @@
                 </div>
 
                 <!-- Barna Sándor -->
-                <div class="bg-card border border-bordercolor flex flex-col">
+                <div class="reveal reveal-d4 bg-card border border-bordercolor flex flex-col">
                     <div class="aspect-square overflow-hidden">
                         <img src="https://cdn.salonic.hu/12248/employees/160_28bc0f8998994aa71df26c42f9762e2f.png" alt="Barna Sándor" class="w-full h-full object-cover hover:scale-105 transition duration-500">
                     </div>
@@ -658,12 +682,6 @@
                         </span>
                         <a href="tel:+36301385386" class="hover:text-gold transition">+36 30 138 5386</a>
                     </li>
-                    <li class="flex items-center gap-2">
-                        <span class="text-gold">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                        </span>
-                        <span>info@goldenhands.hu</span>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -688,6 +706,14 @@
                 ? 'Összes szolgáltatás megtekintése (26 további) ↓'
                 : 'Kevesebb mutatása ↑';
         }
+
+        // Scroll reveal
+        const ro = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
         document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('mobile-menu-btn');
