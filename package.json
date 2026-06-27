@@ -21,5 +21,8 @@
   "homepage": "https://github.com/zsolaaa/golden-hands-barbershop#readme",
   "devDependencies": {
     "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8"
   }
 }
