@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólió | Golden Hands Barbershop</title>
+    <meta name="description" content="A Golden Hand's Barbershop munkái — precíz átmenetek, pengeéles vonalak, letisztult formák.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://goldenhandsgyor.hu/portfolio.html">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face { font-family: 'Inter'; src: url('fonts/inter-latin-300-normal.woff2') format('woff2'); font-weight: 300; font-display: swap; }
+        @font-face { font-family: 'Inter'; src: url('fonts/inter-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+        @font-face { font-family: 'Inter'; src: url('fonts/inter-latin-500-normal.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+        @font-face { font-family: 'Inter'; src: url('fonts/inter-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+        @font-face { font-family: 'Inter'; src: url('fonts/inter-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+        @font-face { font-family: 'Inter'; src: url('fonts/inter-latin-800-normal.woff2') format('woff2'); font-weight: 800; font-display: swap; }
+        @font-face { font-family: 'Inter'; src: url('fonts/inter-latin-900-normal.woff2') format('woff2'); font-weight: 900; font-display: swap; }
+        body { background-color: #080808; color: #ffffff; overflow-x: hidden; }
+
+        #lightbox { display:none; position:fixed; inset:0; z-index:200; background:rgba(8,8,8,0.96); align-items:center; justify-content:center; }
+        #lightbox.open { display:flex; }
+        #lightbox img { max-width:90vw; max-height:88vh; object-fit:contain; }
+        #lb-close { position:absolute; top:1.25rem; right:1.5rem; color:#fff; font-size:1.75rem; cursor:pointer; opacity:0.6; line-height:1; background:none; border:none; }
+        #lb-close:hover { opacity:1; }
+        #lb-prev, #lb-next { position:absolute; top:50%; transform:translateY(-50%); background:none; border:none; color:#fff; font-size:2rem; cursor:pointer; opacity:0.5; padding:1rem; }
+        #lb-prev:hover, #lb-next:hover { opacity:1; }
+        #lb-prev { left:0.5rem; }
+        #lb-next { right:0.5rem; }
+    </style>
+</head>
+<body class="antialiased font-sans">
+
+    <nav class="fixed top-0 w-full z-[60] px-4 md:px-6 py-4 flex justify-between items-center bg-darker/90 border-b border-bordercolor backdrop-blur-md">
+        <a href="/" class="flex flex-col leading-tight">
+            <span class="text-sm md:text-base font-bold tracking-[0.1em] text-white uppercase">Golden Hands</span>
+            <span class="text-[10px] md:text-[11px] font-light tracking-[0.12em] text-gold">by La Patrico</span>
+        </a>
+        <a href="/#portfolio" class="text-[11px] font-bold tracking-[0.15em] text-gray-400 hover:text-gold transition uppercase">← Vissza</a>
+    </nav>
+
+    <main class="pt-24 pb-20">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 mb-10 md:mb-14">
+            <p class="text-gray-500 text-[10px] font-bold tracking-[0.2em] mb-2 uppercase">Vágások</p>
+            <h1 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-4 leading-tight">A Portfólió</h1>
+            <p class="text-gray-400 text-xs md:text-sm leading-relaxed max-w-xl font-light">Precíz átmenetek, pengeéles vonalak, letisztult formák. Minden vágás egy művészet.</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 md:gap-2" id="gallery">
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio1.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio2.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio3.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio4.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio5.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio6.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio7.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio8.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio9.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio10.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio11.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+                <div class="aspect-square overflow-hidden cursor-pointer"><img src="images/portfolio12.webp" alt="Vágás" class="w-full h-full object-cover hover:opacity-80 transition duration-500"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="lightbox" role="dialog" aria-modal="true">
+        <button id="lb-close" aria-label="Bezárás">&times;</button>
+        <button id="lb-prev" aria-label="Előző">&#8592;</button>
+        <img id="lb-img" src="" alt="">
+        <button id="lb-next" aria-label="Következő">&#8594;</button>
+    </div>
+
+    <footer class="border-t border-bordercolor py-8 text-center text-[10px] text-gray-600 tracking-widest uppercase">
+        <p>&copy; 2026 Golden Hand's Barbershop. Minden jog fenntartva.</p>
+    </footer>
+
+    <script>
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lb-img');
+        let lbImages = [], lbIndex = 0;
+
+        function lbOpen(imgs, i) { lbImages = imgs; lbIndex = i; lbImg.src = lbImages[lbIndex]; lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+        function lbClose() { lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }
+        function lbStep(dir) { lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length; lbImg.src = lbImages[lbIndex]; }
+
+        document.getElementById('lb-close').addEventListener('click', lbClose);
+        document.getElementById('lb-prev').addEventListener('click', () => lbStep(-1));
+        document.getElementById('lb-next').addEventListener('click', () => lbStep(1));
+        lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+        document.addEventListener('keydown', e => {
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'Escape') lbClose();
+            if (e.key === 'ArrowLeft') lbStep(-1);
+            if (e.key === 'ArrowRight') lbStep(1);
+        });
+
+        const imgs = [...document.querySelectorAll('#gallery img')];
+        const srcs = imgs.map(i => i.src);
+        imgs.forEach((img, i) => img.addEventListener('click', () => lbOpen(srcs, i)));
+    </script>
+</body>
+</html>
