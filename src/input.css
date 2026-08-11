@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Billentyűzet-fókusz gyűrűk – ismétlődő focus-visible láncok helyett */
+  .fr-gold {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker;
+  }
+  .fr-gold-4 {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-darker;
+  }
+  .fr-white {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-darker;
+  }
+  .fr-white-4 {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-darker;
+  }
+
+  /* Csapatkártya „Foglalok hozzá” gombok */
+  .btn-book {
+    @apply mt-4 block text-center border border-gold text-gold text-[10px] font-bold uppercase tracking-widest py-2.5 hover:bg-gold hover:text-black transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-card;
+  }
+  .btn-book-solid {
+    @apply mt-4 block text-center bg-gold text-black text-[10px] font-bold uppercase tracking-widest py-2.5 hover:bg-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-card;
+  }
+}

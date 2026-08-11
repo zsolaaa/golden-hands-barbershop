@@ -59,9 +59,6 @@
       ]
     }
     </script>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
     <style>
         @font-face { font-family: 'Inter'; src: url('fonts/inter-latin-300-normal.woff2') format('woff2'); font-weight: 300; font-display: swap; }
@@ -120,19 +117,19 @@
         </div>
 
         <div class="hidden lg:flex space-x-8 text-[11px] font-bold tracking-[0.15em] text-gray-400">
-            <a href="#about" class="hover:text-gold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">RÓLUNK</a>
+            <a href="#about" class="hover:text-gold transition fr-gold">RÓLUNK</a>
             <!-- <a href="#services" class="hover:text-gold transition">SZOLGÁLTATÁSOK</a> -->
-            <a href="#portfolio" class="hover:text-gold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">FOTÓGALÉRIA</a>
-            <a href="#barber" class="hover:text-gold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">LA PATRICO</a>
-            <a href="#team" class="hover:text-gold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">BORBÉLYOK</a>
-            <a href="#kozosseg" class="hover:text-gold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">KÖZÖSSÉG</a>
+            <a href="#portfolio" class="hover:text-gold transition fr-gold">FOTÓGALÉRIA</a>
+            <a href="#barber" class="hover:text-gold transition fr-gold">LA PATRICO</a>
+            <a href="#team" class="hover:text-gold transition fr-gold">BORBÉLYOK</a>
+            <a href="#kozosseg" class="hover:text-gold transition fr-gold">KÖZÖSSÉG</a>
         </div>
 
         <div class="hidden lg:block relative z-[70]">
-            <a href="https://lapatrico.salonic.hu/" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-darker">Időpontot foglalok</a>
+            <a href="https://lapatrico.salonic.hu/" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition fr-white">Időpontot foglalok</a>
         </div>
 
-        <button id="mobile-menu-btn" class="lg:hidden text-white relative z-[70] p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">
+        <button id="mobile-menu-btn" class="lg:hidden text-white relative z-[70] p-2 fr-gold">
             <svg id="icon-open" class="w-8 h-8 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -143,13 +140,13 @@
     </nav>
 
     <div id="mobile-menu" class="fixed inset-0 bg-darker z-[50] flex flex-col items-center justify-center space-y-8 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
-        <a href="#about" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-darker">RÓLUNK</a>
+        <a href="#about" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition fr-gold-4">RÓLUNK</a>
         <!-- <a href="#services" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition">SZOLGÁLTATÁSOK</a> -->
-        <a href="#portfolio" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-darker">FOTÓGALÉRIA</a>
-        <a href="#barber" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-darker">LA PATRICO</a>
-        <a href="#team" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-darker">BORBÉLYOK</a>
-        <a href="#kozosseg" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-darker">KÖZÖSSÉG</a>
-        <a href="https://lapatrico.salonic.hu/" target="_blank" rel="noopener noreferrer" class="mobile-link mt-8 bg-gold text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-darker">Időpontot foglalok</a>
+        <a href="#portfolio" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition fr-gold-4">FOTÓGALÉRIA</a>
+        <a href="#barber" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition fr-gold-4">LA PATRICO</a>
+        <a href="#team" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition fr-gold-4">BORBÉLYOK</a>
+        <a href="#kozosseg" class="mobile-link text-2xl font-black tracking-[0.2em] text-white hover:text-gold uppercase transition fr-gold-4">KÖZÖSSÉG</a>
+        <a href="https://lapatrico.salonic.hu/" target="_blank" rel="noopener noreferrer" class="mobile-link mt-8 bg-gold text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition fr-white-4">Időpontot foglalok</a>
     </div>
 
     <header class="relative min-h-[90vh] flex items-center pt-24 md:pt-20 bg-darker border-b border-bordercolor">
@@ -167,10 +164,10 @@
                     Tiszta vonalvezetés, minden centiméterre odafigyelve. Győrben azért választanak minket sokan, mert nálunk a vágásnak ideje van – nem kapkodunk, amíg nem tökéletes az eredmény.
                 </p>
                 <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center lg:justify-start w-full sm:w-auto">
-                    <a href="https://lapatrico.salonic.hu/" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-6 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition text-center flex justify-center items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-darker">
+                    <a href="https://lapatrico.salonic.hu/" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-6 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition text-center flex justify-center items-center gap-2 fr-white">
                        Időpontot foglalok &rarr;
                     </a>
-                    <a href="tel:+36301385386" class="border border-gold text-gold px-6 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition text-center flex justify-center items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">
+                    <a href="tel:+36301385386" class="border border-gold text-gold px-6 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition text-center flex justify-center items-center gap-2 fr-gold">
                         &#9990; +36 30 138 5386
                     </a>
                 </div>
@@ -512,13 +509,13 @@
             </div>
 
             <div class="mt-6 flex justify-center">
-                <button id="services-toggle" onclick="toggleServices()" class="border border-gold text-gold px-8 py-3 text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">
+                <button id="services-toggle" onclick="toggleServices()" class="border border-gold text-gold px-8 py-3 text-[11px] font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition fr-gold">
                     Összes szolgáltatás megtekintése (26 további) ↓
                 </button>
             </div>
 
             <div class="mt-4 flex justify-center services-extra hidden">
-                <a href="https://lapatrico.salonic.hu/" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-10 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-darker">
+                <a href="https://lapatrico.salonic.hu/" target="_blank" rel="noopener noreferrer" class="bg-gold text-black px-10 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white transition fr-white">
                     Foglalj időpontot &rarr;
                 </a>
             </div>
@@ -550,7 +547,7 @@
                 </div>
             </div>
 
-            <a href="/portfolio.html" class="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-gold hover:text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">Tovább a galériához <span class="text-base leading-none">→</span></a>
+            <a href="/portfolio.html" class="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-gold hover:text-white transition fr-gold">Tovább a galériához <span class="text-base leading-none">→</span></a>
         </div>
     </section>
 
@@ -601,7 +598,7 @@
                         <p class="text-gold text-[9px] font-bold tracking-[0.2em] uppercase mb-1">Tulajdonos & Alapító</p>
                         <h3 class="text-white text-sm font-black uppercase tracking-wider mb-3">Mihácsi Patrik</h3>
                         <p class="text-gray-400 text-[11px] leading-relaxed italic flex-1">"Prémium hajvágás, ahol a részletek számítanak. Tökéletes átmenetek, letisztult forma."</p>
-                        <a href="https://lapatrico.salonic.hu/employees/28138/?placeId=12837" target="_blank" rel="noopener noreferrer" class="mt-4 block text-center bg-gold text-black text-[10px] font-bold uppercase tracking-widest py-2.5 hover:bg-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-card">Foglalok hozzá · Árak</a>
+                        <a href="https://lapatrico.salonic.hu/employees/28138/?placeId=12837" target="_blank" rel="noopener noreferrer" class="btn-book-solid">Foglalok hozzá · Árak</a>
                     </div>
                 </div>
 
@@ -614,7 +611,7 @@
                         <p class="text-gold text-[9px] font-bold tracking-[0.2em] uppercase mb-1">Barber</p>
                         <h3 class="text-white text-sm font-black uppercase tracking-wider mb-3">Nyári Norbert</h3>
                         <p class="text-gray-400 text-[11px] leading-relaxed italic flex-1">"A hajvágás nem munka, hanem szenvedély. Minden vendég magabiztosan és stílusosan távozzon."</p>
-                        <a href="https://lapatrico.salonic.hu/employees/29559/?placeId=12837" target="_blank" rel="noopener noreferrer" class="mt-4 block text-center border border-gold text-gold text-[10px] font-bold uppercase tracking-widest py-2.5 hover:bg-gold hover:text-black transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-card">Foglalok hozzá · Árak</a>
+                        <a href="https://lapatrico.salonic.hu/employees/29559/?placeId=12837" target="_blank" rel="noopener noreferrer" class="btn-book">Foglalok hozzá · Árak</a>
                     </div>
                 </div>
 
@@ -627,7 +624,7 @@
                         <p class="text-gold text-[9px] font-bold tracking-[0.2em] uppercase mb-1">Barber</p>
                         <h3 class="text-white text-sm font-black uppercase tracking-wider mb-3">Mága Rio</h3>
                         <p class="text-gray-400 text-[11px] leading-relaxed italic flex-1">"Tiszta fade, pontos vonalak, stílus kompromisszum nélkül. Nem csak vágok – megjelenést adok."</p>
-                        <a href="https://lapatrico.salonic.hu/employees/29948/?placeId=12837" target="_blank" rel="noopener noreferrer" class="mt-4 block text-center border border-gold text-gold text-[10px] font-bold uppercase tracking-widest py-2.5 hover:bg-gold hover:text-black transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-card">Foglalok hozzá · Árak</a>
+                        <a href="https://lapatrico.salonic.hu/employees/29948/?placeId=12837" target="_blank" rel="noopener noreferrer" class="btn-book">Foglalok hozzá · Árak</a>
                     </div>
                 </div>
 
@@ -640,7 +637,7 @@
                         <p class="text-gold text-[9px] font-bold tracking-[0.2em] uppercase mb-1">Barber</p>
                         <h3 class="text-white text-sm font-black uppercase tracking-wider mb-3">Barna Sándor</h3>
                         <p class="text-gray-400 text-[11px] leading-relaxed italic flex-1">"Nem mindennapi fade-et, éles kontúrt vagy tiszta szakálligazítást kapsz – családias légkörben."</p>
-                        <a href="https://lapatrico.salonic.hu/employees/31218/?placeId=12837" target="_blank" rel="noopener noreferrer" class="mt-4 block text-center border border-gold text-gold text-[10px] font-bold uppercase tracking-widest py-2.5 hover:bg-gold hover:text-black transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-card">Foglalok hozzá · Árak</a>
+                        <a href="https://lapatrico.salonic.hu/employees/31218/?placeId=12837" target="_blank" rel="noopener noreferrer" class="btn-book">Foglalok hozzá · Árak</a>
                     </div>
                 </div>
 
@@ -664,30 +661,30 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2">
-                <div class="reveal aspect-square overflow-hidden cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
+                <div class="reveal aspect-square overflow-hidden cursor-pointer fr-gold" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
                     <img src="images/kozosseg.webp" loading="lazy" alt="Sajtóhír a Golden Hand's csapatának jótékonysági gyermekhajvágásáról" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
-                <div class="reveal reveal-d1 aspect-square overflow-hidden cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
+                <div class="reveal reveal-d1 aspect-square overflow-hidden cursor-pointer fr-gold" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
                     <img src="images/kozosseg2.webp" loading="lazy" alt="Jótékonysági hajvágás időseknek szabadtéri rendezvényen" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
-                <div class="reveal reveal-d2 aspect-square overflow-hidden cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
+                <div class="reveal reveal-d2 aspect-square overflow-hidden cursor-pointer fr-gold" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
                     <img src="images/kozosseg3.webp" loading="lazy" alt="A Golden Hand's csapata szelfizik a jótékonysági rendezvényen" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
-                <div class="reveal reveal-d3 aspect-square overflow-hidden cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
+                <div class="reveal reveal-d3 aspect-square overflow-hidden cursor-pointer fr-gold" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
                     <img src="images/kozosseg4.webp" loading="lazy" alt="Gyerek hajvágás Pókember arcfestéssel, jótékonysági napon" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
-                <div class="reveal reveal-d1 aspect-square overflow-hidden cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
+                <div class="reveal reveal-d1 aspect-square overflow-hidden cursor-pointer fr-gold" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
                     <img src="images/kozosseg5.webp" loading="lazy" alt="Apa és gyermeke a jótékonysági rendezvényen" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
-                <div class="reveal reveal-d2 aspect-square overflow-hidden cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
+                <div class="reveal reveal-d2 aspect-square overflow-hidden cursor-pointer fr-gold" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
                     <img src="images/kozosseg6.webp" loading="lazy" alt="Ingyenes gyerek hajvágás kültéri rendezvényen" class="w-full h-full object-cover hover:opacity-80 transition duration-500">
                 </div>
-                <div class="reveal reveal-d3 aspect-square overflow-hidden cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
+                <div class="reveal reveal-d3 aspect-square overflow-hidden cursor-pointer fr-gold" tabindex="0" role="button" aria-label="Kép megnyitása nagyítva">
                     <img src="images/kozosseg7.webp" loading="lazy" alt="A csapat 'Ingyen vágás' és 'Gyerek hajvágás' táblákkal" class="w-full h-full object-cover object-center hover:opacity-80 transition duration-500">
                 </div>
             </div>
             <div class="reveal mt-6 md:mt-8 text-center">
-                <a href="/kozosseg.html" class="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-gold hover:text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">Összes fotó megtekintése <span class="text-base leading-none">→</span></a>
+                <a href="/kozosseg.html" class="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-gold hover:text-white transition fr-gold">Összes fotó megtekintése <span class="text-base leading-none">→</span></a>
             </div>
         </div>
     </section>
@@ -707,10 +704,10 @@
                 </div>
                 <p class="text-gray-400 text-[11px] md:text-xs leading-relaxed max-w-sm mx-auto sm:mx-0 mb-6">Aprólékos bőrátmenetek, tiszta kontúrvonalak és profi szakállformázás. Nálunk minden vágás egyedi munka – ide sietősen senki nem jön be, és sietősen ki sem megy.</p>
                 <div class="flex gap-4 justify-center sm:justify-start">
-                    <a href="https://www.tiktok.com/@la_patrico_cut" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center bg-card border border-bordercolor hover:border-gold transition text-gray-400 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker" aria-label="TikTok">
+                    <a href="https://www.tiktok.com/@la_patrico_cut" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center bg-card border border-bordercolor hover:border-gold transition text-gray-400 hover:text-gold fr-gold" aria-label="TikTok">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
                     </a>
-                    <a href="https://www.facebook.com/profile.php?id=61576725628096" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center bg-card border border-bordercolor hover:border-gold transition text-gray-400 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker" aria-label="Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61576725628096" target="_blank" rel="noopener noreferrer" class="w-8 h-8 flex items-center justify-center bg-card border border-bordercolor hover:border-gold transition text-gray-400 hover:text-gold fr-gold" aria-label="Facebook">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
                 </div>
@@ -719,9 +716,9 @@
             <div class="text-center sm:text-left">
                 <h4 class="text-white text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase mb-4 md:mb-5">Navigáció</h4>
                 <ul class="space-y-3 text-[11px] md:text-xs text-gray-400">
-                    <li><a href="#about" class="hover:text-gold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">Rólunk</a></li>
+                    <li><a href="#about" class="hover:text-gold transition fr-gold">Rólunk</a></li>
                     <!-- <li><a href="#services" class="hover:text-gold transition">Szolgáltatások és Árak</a></li> -->
-                    <li><a href="#portfolio" class="hover:text-gold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">Galéria</a></li>
+                    <li><a href="#portfolio" class="hover:text-gold transition fr-gold">Galéria</a></li>
                 </ul>
             </div>
 
@@ -738,7 +735,7 @@
                         <span class="text-gold">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                         </span>
-                        <a href="tel:+36301385386" class="hover:text-gold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">+36 30 138 5386</a>
+                        <a href="tel:+36301385386" class="hover:text-gold transition fr-gold">+36 30 138 5386</a>
                     </li>
                 </ul>
             </div>
@@ -746,8 +743,8 @@
 
         <div class="max-w-6xl mx-auto px-4 md:px-6 border-t border-bordercolor pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center text-[9px] md:text-[10px] text-gray-400 tracking-widest uppercase text-center md:text-left gap-4 md:gap-0">
             <p>&copy; 2026 Golden Hand's Barbershop. Minden jog fenntartva.</p>
-            <a href="/adatvedelem.html" class="hover:text-gray-400 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">Adatvédelmi Tájékoztató</a>
-            <a href="/impresszum.html" class="hover:text-gray-400 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-darker">Impresszum</a>
+            <a href="/adatvedelem.html" class="hover:text-gray-400 transition fr-gold">Adatvédelmi Tájékoztató</a>
+            <a href="/impresszum.html" class="hover:text-gray-400 transition fr-gold">Impresszum</a>
         </div>
     </footer>
 
